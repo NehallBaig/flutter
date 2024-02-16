@@ -492,7 +492,13 @@ abstract class FlutterDriver {
   /// });
   /// ```
   Future<void> enterText(String text, { Duration? timeout }) async {
-    await sendCommand(EnterText(text, timeout: timeout));
+    // Commented sendCommand to debug the changes
+    //await sendCommand(EnterText(text, timeout: timeout));
+  }
+
+  /// Returns the debug as String, written method for testing
+  Future<String> debug() async {
+    return 'debug';
   }
 
   /// Configures text entry emulation.
